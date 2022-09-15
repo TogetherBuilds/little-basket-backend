@@ -109,6 +109,22 @@ An online grocery shopping application
 > }
 > ```
 
+### Verify Email `Open`
+
+> `Description`
+>
+> > Verifies the email entered by the user
+>
+> `Method`
+>
+> > **GET**
+>
+> `URL`
+>
+> ```
+> /identity/verify/:verificationToken
+> ```
+
 ## User
 
 ### Fetch self profile `Closed`
