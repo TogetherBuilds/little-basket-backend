@@ -1,11 +1,13 @@
 const express = require('express');
 const globalErrorHandler = require('./middleware/globalErrorHandler');
+const identityRouter = require('./routes/identityRoutes');
 const catchAsyncError = require('./utils/catchAsyncError');
 const CustomError = require('./utils/CustomError');
 
 const app = express();
 
-// Add your routes here
+// Mount your routes here
+app.use('/', identityRouter);
 
 app.all('*', (req, res, next) => {
 	res.json({ message: 'Invalid route (Pakkakelli aaduko)' });
